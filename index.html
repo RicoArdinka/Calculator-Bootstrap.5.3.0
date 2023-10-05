@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <style>
+    main {
+      max-width: 371px;
+    }
+    .btn {
+      height: 66px;
+    }
+  </style>
+  <body class="d-grid bg-secondary p-3 pt-5">
+    <main
+      class="d-block bg-dark-subtle flex-column mx-auto w-100 border p-2 rounded"
+    >
+      <input
+        type="text"
+        name="n"
+        id="n"
+        class="form-control shadow-none bg-white text-end fs-1"
+        value="0"
+        disabled
+      />
+
+      <div class="row mt-1 g-2">
+        <div class="col-6 d-grid">
+          <button
+            id="delete"
+            class="btn bg-dark bg-opacity-10 shadow-none border fs-5"
+            onclick="hapus()"
+          >
+            Hapus
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button class="btn shadow-none border fs-5" onclick="tekan('%')">
+            %
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button
+            class="btn bg-info bg-opacity-25 shadow-none border-0 fs-5"
+            onclick="tekan('+')"
+          >
+            +
+          </button>
+        </div>
+      </div>
+
+      <div class="row pt-1 g-2">
+        <div class="col d-grid">
+          <button
+            class="btn bg-opacity-25 shadow-none border fs-5"
+            onclick="tekan('1')"
+          >
+            1
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button class="btn shadow-none border fs-5" onclick="tekan('2')">
+            2
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button class="btn shadow-none border fs-5" onclick="tekan('3')">
+            3
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button
+            class="btn bg-warning bg-opacity-10 shadow-none border-0 fs-5"
+            onclick="tekan('-')"
+          >
+            -
+          </button>
+        </div>
+      </div>
+
+      <div class="row pt-1 g-2">
+        <div class="col d-grid">
+          <button
+            class="btn bg-opacity-25 shadow-none border fs-5"
+            onclick="tekan('4')"
+          >
+            4
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button class="btn shadow-none border fs-5" onclick="tekan('5')">
+            5
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button class="btn shadow-none border fs-5" onclick="tekan('6')">
+            6
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button
+            class="btn bg-danger bg-opacity-10 shadow-none border-0 fs-5"
+            onclick="tekan('*')"
+          >
+            x
+          </button>
+        </div>
+      </div>
+
+      <div class="row pt-1 g-2">
+        <div class="col d-grid">
+          <button
+            class="btn bg-opacity-25 shadow-none border fs-5"
+            onclick="tekan('7')"
+          >
+            7
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button class="btn shadow-none border fs-5" onclick="tekan('8')">
+            8
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button class="btn shadow-none border fs-5" onclick="tekan('9')">
+            9
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button
+            class="btn bg-success bg-opacity-10 shadow-none border-0 fs-5"
+            onclick="tekan('/')"
+          >
+            /
+          </button>
+        </div>
+      </div>
+
+      <div class="row pt-1 g-2">
+        <div class="col d-grid">
+          <button
+            class="btn bg-dark bg-opacity-25 shadow-none border fs-5"
+            onclick="n.value='0'"
+          >
+            C
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button class="btn shadow-none border fs-5" onclick="tekan('0')">
+            0
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button class="btn shadow-none border fs-5" onclick="tekan('.')">
+            .
+          </button>
+        </div>
+        <div class="col d-grid">
+          <button
+            id="equal"
+            class="btn bg-primary bg-opacity-25 shadow-none border-0 fs-5"
+            onclick="tekan('=')"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+  <script src="calculator.js"></script>
+</html>
